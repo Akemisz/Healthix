@@ -1,6 +1,7 @@
 package br.com.fiap.healthix.model;
 
 import jakarta.persistence.GeneratedValue;
+import br.com.fiap.healthix.validation.Email;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -26,6 +27,7 @@ public class User {
     private  String nome;
 
     @NotBlank(message = "{user.email.notblank}")
+    @Email
     private String email;
 
     @NotBlank(message = "{user.senha.notblank}")
